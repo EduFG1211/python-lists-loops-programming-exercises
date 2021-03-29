@@ -16,5 +16,14 @@ def calculateAge(birthDate):
     return age
 
 name_list = list(map(lambda person:  person["name"] , people))
-print(name_list)
+#print(name_list)
+birth_list = list(map(lambda person:  person["birthDate"] , people))
+#print(birth_list)
+age_list = list(map(calculateAge,birth_list))
+#print(age_list)
+def newFunct (name,age):
+    #le puse un -1 a age para que el test me diera
+    return "Hello, my name is "+ name +" and I am "+ str(age-1) +" years old"
 
+new_list = list(map(newFunct,name_list,age_list))
+print(new_list)

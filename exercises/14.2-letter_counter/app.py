@@ -2,6 +2,16 @@ par = "Lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur eget bib
 
 counts = {}
 #your code go here:
+par = par.replace(" ","")
+par = par.lower()
+#print(par)
+for i in par:
+    counts[i] = 0
+
+for j in par:
+    if counts[j] >= 0:
+        counts[j] = counts[j] + 1
 
 print(counts)
+
 

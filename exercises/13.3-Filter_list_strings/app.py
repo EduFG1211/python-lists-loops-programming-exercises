@@ -7,3 +7,8 @@ names = ['Liam','Emma','Noah','Olivia','William','Ava','James','Isabella','Logan
 
 
 #Your code go here:
+def my_function(item):
+    return item.find("am") >= 0
+
+result = list(filter(my_function, names))
+print(result)
